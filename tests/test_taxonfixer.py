@@ -5,10 +5,10 @@ import taxonfixer
 
 class TestTreeReWrite(unittest.TestCase):
     def test_tree_rewrite1(self):
-        treelist = ['((fee,fi),(fo,fum));','((fee,fum),(fi,fa));','(((foo,fa),fi),fo);']
-        taxondict = {'fee':1, 'fi':2, 'fo':3, 'fum':4, 'fa':5, 'foo':6}
-        newlist = ['((1,2),(3,4));','((1,4),(2,5));','(((6,5),2),3);']
-        n,d = taxonfixer.listparse(treelist)
+        treelist = dendropy.TreeList.get_from_path('/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofum','newick')
+        taxondict = {'fa': 1, 'fee': 2, 'fi' : 3, 'fo': 4, 'foo': 5, 'fum': 6}
+        newlist = ['((2,3),(4,6));', '((2,6),(3,1));', '(((5,1),3),4);']
+        n,d = taxonfixer.listparse('/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofum')
         self.assertEqual(n,newlist)
         self.assertEqual(d,taxondict)
         
