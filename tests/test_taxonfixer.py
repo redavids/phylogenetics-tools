@@ -8,8 +8,7 @@ class TestTreeReWrite(unittest.TestCase):
         treelist = ['((fee,fi),(fo,fum));','((fee,fum),(fi,fa));','(((foo,fa),fi),fo);']
         taxondict = {'fee':1, 'fi':2, 'fo':3, 'fum':4, 'fa':5, 'foo':6}
         newlist = ['((1,2),(3,4));','((1,4),(2,5));','(((6,5),2),3);']
-        n = taxonfixer.listparse(treelist)[0]
-        d = taxonfixer.listparse(treelist)[1]
+        n,d = taxonfixer.listparse(treelist)
         self.assertEqual(n,newlist)
         self.assertEqual(d,taxondict)
         
