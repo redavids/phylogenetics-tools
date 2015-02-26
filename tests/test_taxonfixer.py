@@ -12,4 +12,10 @@ class TestTreeReWrite(unittest.TestCase):
         self.assertEqual(n,newlist)
         self.assertEqual(d,taxondict)
         
-        
+    def test_tree_rewrite2(self):
+        treelist = dendropy.TreeList.get_from_path('/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtrees','newick')
+        taxondict = {'a':1, 'b':2, 'c':3, 'd':4}
+        newlist = ['(((1,2),3),4);','((1,3),(2,4));','((4,1),(2,3));']
+        n,d = taxonfixer.listparse('/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtrees')
+        self.assertEqual(n,newlist)
+        self.assertEqual(d,taxondict)
