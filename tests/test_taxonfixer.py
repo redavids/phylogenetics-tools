@@ -19,3 +19,24 @@ class TestTreeReWrite(unittest.TestCase):
         n,d = taxonfixer.listparse('/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtrees')
         self.assertEqual(n,newlist)
         self.assertEqual(d,taxondict)
+
+class TestFileSwap(unittest.TestCase):
+    def test_file_rewrite(self):
+        taxonfixer.fileswap('/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofum','/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofumswap','newick')
+        l =[]
+        f = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofumswap','r')
+        s1 = f.read()
+        g = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/testffffswap','r')
+        s2 = g.read()
+        self.assertEqual(s1,s2)
+
+    def test_file_rewrite2(self):
+        taxonfixer.fileswap('/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtrees','/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtreesswap','newick')
+        l =[]
+        f = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtreesswap','r')
+        s1 = f.read()
+        g = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/testabcdswap','r')
+        s2 = g.read()
+        self.assertEqual(s1,s2)
+
+        
