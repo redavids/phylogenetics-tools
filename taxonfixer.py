@@ -27,5 +27,8 @@ def fileswap(infile, outfile, form):
         labeldict[taxa[i].label] = labels.index(taxa[i].label)+1
         taxa[i].label = str(labels.index(taxa[i].label)+1)
     L.write_to_path(outfile,form)
-    
+    H = open(infile+'.taxon_key', 'w')
+    H.write(str(labeldict))
+    H.close()
+   
   

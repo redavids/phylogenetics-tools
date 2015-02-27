@@ -1,3 +1,4 @@
+import ast
 import dendropy
 import unittest
 import numpy as np
@@ -23,12 +24,23 @@ class TestTreeReWrite(unittest.TestCase):
 class TestFileSwap(unittest.TestCase):
     def test_file_rewrite(self):
         taxonfixer.fileswap('/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofum','/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofumswap','newick')
-        l =[]
+        #d = {'fa': 1, 'fee': 2, 'fi' : 3, 'fo': 4, 'foo': 5, 'fum': 6}
         f = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofumswap','r')
         s1 = f.read()
         g = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/testffffswap','r')
         s2 = g.read()
         self.assertEqual(s1,s2)
+        h = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/dictffffswap','r')
+        Sh = h.read()
+        dh = ast.literal_eval(Sh)
+        k = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/feefifofum.taxon_key','r')
+        Sk = k.read()
+        dk = ast.literal_eval(Sk)
+        self.assertEqual(dh, dk)
+        h.close()
+        k.close()
+        f.close()
+        g.close()
 
     def test_file_rewrite2(self):
         taxonfixer.fileswap('/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtrees','/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtreesswap','newick')
@@ -38,5 +50,17 @@ class TestFileSwap(unittest.TestCase):
         g = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/testabcdswap','r')
         s2 = g.read()
         self.assertEqual(s1,s2)
+        h = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/dictabcdswap','r')
+        Sh = h.read()
+        dh = ast.literal_eval(Sh)
+        k = open('/Users/ruthdavidson/code/phylogenetics-tools/tests/abcdtrees.taxon_key','r')
+        Sk = k.read()
+        dk = ast.literal_eval(Sk)
+        self.assertEqual(dh, dk)
+        h.close()
+        k.close()
+        f.close()
+        g.close()
+
 
         
