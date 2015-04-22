@@ -1,6 +1,8 @@
 import sys
 import dendropy
 import copy
+#this script is for taking a list of QMC formatted quartets and turning them into wQMC formatted quartets by weight=frequency
+
 
 infile = str(sys.argv[1])
 
