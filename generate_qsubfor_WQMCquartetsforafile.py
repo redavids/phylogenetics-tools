@@ -7,7 +7,7 @@ infilename = str(sys.argv[1])
  
 outfilename = str(sys.argv[2])
 
-qsubscriptname = 'WQMCquartetsfor_' + infilename +'.qsub'
+qsubscriptname = 'WQMCquartetsfor.' + infilename[-40:n] +'.qsub'
  
 headstr1 = '#declare name of job \n#PBS -N ruthquartets.' + infilename + '\n'
 
