@@ -1,13 +1,13 @@
 import sys
 
-if len(sys.argv) < 2:
-        print 'usage python thisscript.py pathtoyourinputfile outfilename'
+if len(sys.argv) < 3:
+        print 'usage python thisscript.py pathtoyourinputfile outfilename qsubscriptname'
 
 infilename = str(sys.argv[1])
  
 outfilename = str(sys.argv[2])
 
-qsubscriptname = 'WQMCquartetsfor.' + infilename[-40:] +'.qsub'
+qsubscriptname = str(sys.argv[3]) +'.qsub'
  
 headstr1 = '#declare name of job \n#PBS -N ruthquartets.' + infilename + '\n'
 
