@@ -21,7 +21,7 @@ will output 3 numbers:
 b1 b2 b2/b1
 
 where b1 are the nontrivial splits displayed by tree1, b2 are the splits in b1 that are displayed by b2, so that b2/b1 is
-the proportion of nontrivial branches in <tree1> that appear in <tree2>
+the proportion of nontrivial branches in <tree2> that appear in <tree1>
 
 and 
 
