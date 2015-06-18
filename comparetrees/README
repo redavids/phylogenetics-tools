@@ -1,4 +1,31 @@
-These scripts are based on tools that Siavash Mirarab pulled off of this website:
+These scripts are based on tools by M.N. Price obtained at this website:
 
 http://www.microbesonline.org/fasttree/treecmp.html
+
+First download the folder tree_comp_morgan, compareTrees, compareTrees.missingBranch, 
+and compareTrees.missingBranchRate to the same folder from which you want to do your calculations. 
+
+Then, set file permissions (e.g. chmod 755) to make the scripts compareTrees, compareTrees.missingBranch, 
+and compareTrees.missingBranchRate executable. 
+
+usage: if <tree1> and <tree2> are paths to tree files in newick format, then 
+
+./compareTrees <tree1> <tree2> 
+
+will output a lot of information about the two trees. 
+
+./compareTrees.missingBranch <tree1> <tree2>
+
+will output 3 numbers: 
+
+b1 b2 b2/b1
+
+where b1 are the nontrivial splits displayed by tree1, b2 are the splits in b1 that are displayed by b2, so that b2/b1 is
+the proportion of nontrivial branches in <tree1> that appear in <tree2>
+
+and 
+
+./compareTrees.missingBranchRate <tree1> <tree2>
+
+will simply output the number b2/b1
 
