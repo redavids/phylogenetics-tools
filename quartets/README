@@ -1,0 +1,17 @@
+The tools in this folder are all based on tools from the reference 
+
+    
+Johansen, J.: Computing triplet and quartet distances. PhD thesis, Aarhus University, Computer Science Department (2013), which can be found online at the link
+
+http://jensjohansen.com/thesis/
+
+To use these tools, download the whole quartets folder that contains this README
+
+the usage for quartet-controller is:
+
+./quartet-controller.sh <treesfile> <quartetfrequencies>
+
+where <treesfile> is a file containing a collection of trees in newick format, and <quartetfrequencies> is the name of the output file in which each line is a quartet induced by the trees in <treesfile> and the number of times it appears in the trees in <treesfile>  
+
+
+
