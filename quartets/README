@@ -7,11 +7,15 @@ http://jensjohansen.com/thesis/
 
 To use these tools, download the whole quartets folder that contains this README
 
-the usage for quartet-controller is:
+the usage for quartet-controller.sh is:
 
 ./quartet-controller.sh <treesfile> <quartetfrequencies>
 
 where <treesfile> is a file containing a collection of trees in newick format, and <quartetfrequencies> is the name of the output file in which each line is a quartet induced by the trees in <treesfile> and the number of times it appears in the trees in <treesfile>  
 
+The usage for calculate_weight sh is
 
+./calculate_weight.sh <treesfile> <quartetscores> 
+
+where <treesfile> is a file containing a collection of trees in newick format, and <quartetscores> is a list of quartets induced by the trees in <treesfile> paired with the the number of times it appears in the trees in <treesfile>: the key difference between quartet-controller.sh and calculate_weight.sh is that the file <quartetscores> is formatted as input to wQMC (provided the taxon names are integers-wQMC required taxon names to be integers).  
 
