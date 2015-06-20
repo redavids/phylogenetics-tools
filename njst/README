@@ -1,4 +1,4 @@
-This folder contains a package for running NJst, the method from the paper 
+This folder contains a custom package by Siavash Mirarab  for running NJst, the method from the paper 
 Liu, L., Yu, L.: Estimating species trees from unrooted gene trees. Syst. Biol. 60, 661–667 (2011)
 using R.  This package will run on a linux machine only.  You must have R version 3.1.2 installed, as well as the R packages Matrix, methods, ape, and phybase version 1.4. 
 
