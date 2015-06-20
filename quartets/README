@@ -13,7 +13,7 @@ the usage for quartet-controller.sh is:
 
 where <treesfile> is a file containing a collection of trees in newick format, and <quartetfrequencies> is the name of the output file in which each line is a quartet induced by the trees in <treesfile> and the number of times it appears in the trees in <treesfile>  
 
-The usage for calculate_weight sh is
+The usage for calculate_weight.sh is
 
 ./calculate_weight.sh <treesfile> <quartetscores> 
 
